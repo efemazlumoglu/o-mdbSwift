@@ -30,6 +30,22 @@ class MainPageViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "detail") as! DetailViewController
+        let navEditorViewController: UINavigationController = UINavigationController(rootViewController: vc)
+        navEditorViewController.modalPresentationStyle = .fullScreen
+        vc.actorText = self.actors
+        vc.runtimeText = self.runtime
+        vc.boxOfficeText = self.boxOffice
+        vc.genreText = self.genre
+        vc.directorText = self.director
+        vc.imageLink = self.imageMovie
+        vc.ratedText = self.rated
+        vc.releasedDateText = self.releasedDate
+        self.present(navEditorViewController, animated: true, completion: nil)
+    }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 2
     }
@@ -87,6 +103,14 @@ class MainPageViewController: UIViewController, UITableViewDataSource, UITableVi
                             print(responseDecoded)
                             self.yearOfMovie = responseDecoded.Year
                             self.titleOfMovie = responseDecoded.Title
+                            self.runtime = responseDecoded.Runtime
+                            self.rated = responseDecoded.Rated
+                            self.releasedDate = responseDecoded.Released
+                            self.imageMovie = responseDecoded.Poster
+                            self.genre = responseDecoded.Genre
+                            self.director = responseDecoded.Director
+                            self.actors = responseDecoded.Actors
+                            self.boxOffice = responseDecoded.BoxOffice
                             self.movieTableView.reloadData()
                             self.movieTableView.isHidden = false
                             spinner.removeFromSuperview()
@@ -110,6 +134,14 @@ class MainPageViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     var titleOfMovie = ""
     var yearOfMovie = ""
+    var runtime = ""
+    var rated = ""
+    var releasedDate = ""
+    var imageMovie = ""
+    var genre = ""
+    var director = ""
+    var actors = ""
+    var boxOffice = ""
     let screenSize = UIScreen.main.bounds
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var searchText: UITextField!
