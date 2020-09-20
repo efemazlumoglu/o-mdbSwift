@@ -34,13 +34,13 @@ class MainPageViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     @IBAction func searchAction(_ sender: Any) {
-        let selectionCriteria = String(self.pickerView.selectedRow(inComponent: 0))
-            let paramaters = ["t": self.searchText.text]
-            let headers: HTTPHeaders = ["Content-Type":"text/json"]
-            AF.request("http://www.omdbapi.com", method: .post, parameters: paramaters, encoding: JSONEncoding.default, headers: headers).responseJSON {
+        let paramaters = ["apiKey": "d110fc6", "t": self.searchText.text! as Any] as [String : Any]
+        let headers: HTTPHeaders = ["Content-Type":"application/json"]
+        print(paramaters)
+        AF.request("https://www.omdbapi.com", method: .post, parameters: paramaters as Parameters, encoding: URLEncoding(destination: .queryString), headers: headers).responseJSON {
                     response in
                     print(response)
-                }
+            }
     }
     
     let screenSize = UIScreen.main.bounds
@@ -49,7 +49,7 @@ class MainPageViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var yearText: UITextField!
     @IBOutlet weak var searchBtn: UIButton!
     @IBOutlet weak var movieTableView: UITableView!
-    var movieList: [String] = []
+    var movieList = ResponseModel(Title: "", Year: "", Rated: "", Released: "", Runtime: "", Genre: "", Director: "", Writer: "", Actors: "", Plot: "", Language: "", Country: "", Awards: "", Poster: "", Ratings: RateModel(Source: "", Value: ""), Metascore: "", imdbRating: "", imdbVotes: "", imdbID: "", Type: "", DVD: "", BoxOffice: "", Production: "", Website: "", Response: "")
     var pickerData = ["By Title", "By Id"]
     
     override func viewDidLoad() {

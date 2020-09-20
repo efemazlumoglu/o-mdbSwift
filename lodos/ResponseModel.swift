@@ -9,34 +9,34 @@
 import Foundation
 
 public struct ResponseModel {
-    public let Title: String
-    public let Year: String
-    public let Rated: String
-    public let Released: String
-    public let Runtime: String
-    public let Genre: String
-    public let Director: String
-    public let Writer: String
-    public let Actors: String
-    public let Plot: String
-    public let Language: String
-    public let Country: String
-    public let Awards: String
-    public let Poster: String
-    public let Ratings: RateModel
-    public let Metascore: String
-    public let imdbRating: String
-    public let imdbVotes: String
-    public let imdbID: String
-    public let `Type`: String
-    public let DVD: String
-    public let BoxOffice: String
-    public let Production: String
-    public let Website: String
-    public let Response: String
+    public var Title: String
+    public var Year: String
+    public var Rated: String
+    public var Released: String
+    public var Runtime: String
+    public var Genre: String
+    public var Director: String
+    public var Writer: String
+    public var Actors: String
+    public var Plot: String
+    public var Language: String
+    public var Country: String
+    public var Awards: String
+    public var Poster: String
+    public var Ratings: RateModel
+    public var Metascore: String
+    public var imdbRating: String
+    public var imdbVotes: String
+    public var imdbID: String
+    public var `Type`: String
+    public var DVD: String
+    public var BoxOffice: String
+    public var Production: String
+    public var Website: String
+    public var Response: String
 }
 
 public struct RateModel {
-    public let Source: String
-    public let Value: String
+    public var Source: String
+    public var Value: String
 }
