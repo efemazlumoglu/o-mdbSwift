@@ -17,6 +17,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         monitorNetwork()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        monitorNetwork()
+    }
     func monitorNetwork() {
         let monitor = NWPathMonitor()
         monitor.pathUpdateHandler = { path in

@@ -35,6 +35,7 @@ class MainPageViewController: UIViewController, UITableViewDataSource, UITableVi
         let vc = storyboard.instantiateViewController(withIdentifier: "detail") as! DetailViewController
         let navEditorViewController: UINavigationController = UINavigationController(rootViewController: vc)
         navEditorViewController.modalPresentationStyle = .fullScreen
+        vc.titleText = self.titleOfMovie
         vc.actorText = self.actors
         vc.runtimeText = self.runtime
         vc.boxOfficeText = self.boxOffice

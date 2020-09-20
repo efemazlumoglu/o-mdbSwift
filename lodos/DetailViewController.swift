@@ -28,6 +28,7 @@ class DetailViewController: UIViewController {
     var directorText: String = ""
     var ratedText: String = ""
     var releasedDateText: String = ""
+    var titleText: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         let b = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelClicked))
@@ -41,6 +42,7 @@ class DetailViewController: UIViewController {
         self.director.text = directorText
         self.rated.text = ratedText
         self.releasedDate.text = releasedDateText
+        self.titleOfMovie.text = titleText
     }
     @objc func cancelClicked () {
         self.dismiss(animated: true, completion: nil)
