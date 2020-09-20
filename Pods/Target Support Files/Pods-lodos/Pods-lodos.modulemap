@@ -1,0 +1,6 @@
+framework module Pods_lodos {
+  umbrella header "Pods-lodos-umbrella.h"
+
+  export *
+  module * { export * }
+}
