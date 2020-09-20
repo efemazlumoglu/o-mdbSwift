@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class MainPageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -33,6 +34,13 @@ class MainPageViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     @IBAction func searchAction(_ sender: Any) {
+        let selectionCriteria = String(self.pickerView.selectedRow(inComponent: 0))
+            let paramaters = ["t": self.searchText.text]
+            let headers: HTTPHeaders = ["Content-Type":"text/json"]
+            AF.request("http://www.omdbapi.com", method: .post, parameters: paramaters, encoding: JSONEncoding.default, headers: headers).responseJSON {
+                    response in
+                    print(response)
+                }
     }
     
     let screenSize = UIScreen.main.bounds
