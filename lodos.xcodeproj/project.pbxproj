@@ -11,6 +11,8 @@
 		8079847A25175F5600D04E8D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8079847925175F5600D04E8D /* GoogleService-Info.plist */; };
 		80BA39CB25176768005E581B /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA39CA25176768005E581B /* MainPageViewController.swift */; };
 		80BA3A1225176ADD005E581B /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA3A1125176ADD005E581B /* SpinnerView.swift */; };
+		80BA3A88251782B8005E581B /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA3A87251782B8005E581B /* MovieTableViewCell.swift */; };
+		80BA3A8B251785C9005E581B /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA3A8A251785C9005E581B /* ResponseModel.swift */; };
 		80D2F4CD2515F8BF0023EFB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2F4CC2515F8BF0023EFB6 /* AppDelegate.swift */; };
 		80D2F4CF2515F8BF0023EFB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2F4CE2515F8BF0023EFB6 /* SceneDelegate.swift */; };
 		80D2F4D12515F8BF0023EFB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2F4D02515F8BF0023EFB6 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 		8079847925175F5600D04E8D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		80BA39CA25176768005E581B /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		80BA3A1125176ADD005E581B /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		80BA3A87251782B8005E581B /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		80BA3A8A251785C9005E581B /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		80D2F4C92515F8BF0023EFB6 /* lodos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lodos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D2F4CC2515F8BF0023EFB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80D2F4CE2515F8BF0023EFB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				8079847925175F5600D04E8D /* GoogleService-Info.plist */,
 				80BA39CA25176768005E581B /* MainPageViewController.swift */,
 				80BA3A1125176ADD005E581B /* SpinnerView.swift */,
+				80BA3A87251782B8005E581B /* MovieTableViewCell.swift */,
+				80BA3A8A251785C9005E581B /* ResponseModel.swift */,
 			);
 			path = lodos;
 			sourceTree = "<group>";
@@ -218,7 +224,9 @@
 			files = (
 				80BA39CB25176768005E581B /* MainPageViewController.swift in Sources */,
 				80BA3A1225176ADD005E581B /* SpinnerView.swift in Sources */,
+				80BA3A88251782B8005E581B /* MovieTableViewCell.swift in Sources */,
 				80D2F4D12515F8BF0023EFB6 /* ViewController.swift in Sources */,
+				80BA3A8B251785C9005E581B /* ResponseModel.swift in Sources */,
 				80D2F4CD2515F8BF0023EFB6 /* AppDelegate.swift in Sources */,
 				80D2F4CF2515F8BF0023EFB6 /* SceneDelegate.swift in Sources */,
 			);

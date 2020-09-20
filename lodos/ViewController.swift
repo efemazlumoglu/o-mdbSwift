@@ -29,7 +29,11 @@ class ViewController: UIViewController {
                     self.fetchRemoteConfig()
                     self.displayNewValues()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        self.performSegue(withIdentifier: "mainPage", sender: self)
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "mainPage") as! MainPageViewController
+                        let navEditorViewController: UINavigationController = UINavigationController(rootViewController: vc)
+                        navEditorViewController.modalPresentationStyle = .fullScreen
+                        self.present(navEditorViewController, animated: true, completion: nil)
                     }
                 }
             } else {
