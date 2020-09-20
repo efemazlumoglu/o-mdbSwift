@@ -11,6 +11,7 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var movieName: UILabel!
+    @IBOutlet weak var year: UILabel!
     override class func awakeFromNib() {
         super.awakeFromNib()
     }

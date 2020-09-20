@@ -8,7 +8,11 @@
 
 import Foundation
 
-public struct ResponseModel {
+public struct RootResponse: Decodable {
+    var success: ResponseModel
+}
+
+public struct ResponseModel: Decodable {
     public var Title: String
     public var Year: String
     public var Rated: String
@@ -23,7 +27,7 @@ public struct ResponseModel {
     public var Country: String
     public var Awards: String
     public var Poster: String
-    public var Ratings: RateModel
+    public var Ratings:[[String : String]]
     public var Metascore: String
     public var imdbRating: String
     public var imdbVotes: String
@@ -34,9 +38,4 @@ public struct ResponseModel {
     public var Production: String
     public var Website: String
     public var Response: String
-}
-
-public struct RateModel {
-    public var Source: String
-    public var Value: String
 }
